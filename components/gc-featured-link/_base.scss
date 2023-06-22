@@ -1,0 +1,21 @@
+/* Provisional featured link component */
+
+.gc-featured-link {
+	background-color: $bg-gctheme;
+
+	&.provisional {
+		font-family: Lato, sans-serif;
+		opacity: .9;
+		padding-bottom: $space-md;
+		padding-top: $space-md;
+
+		p:first-of-type {
+			font-weight: $bold-weight;
+			margin-bottom: $space-0;
+		}
+
+		p, a {
+			color: #fff;
+		}
+	}
+}

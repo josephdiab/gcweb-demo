@@ -1,0 +1,166 @@
+---
+title: Méli-mélo features
+description: Reusable features that are into a preliminary state of experimentation.
+lang: en
+altLangPage: méli-mélo-fr.html
+dateModified": 2022-04-21
+css:
+- href: https://use.fontawesome.com/releases/v5.8.1/css/all.css
+  integrity: sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf
+---
+
+<p>Reusable features that are into a preliminary state of experimentation. Features are built from custom CSS and/or Javascript code. Once a feature is developed and minimum requirements are met, a méli-mélo can be deployed and ready for use within one week on Canada.ca. Check out <a href="#mli-mlo-list">existing mélis-mélos</a>.</p>
+
+<div class="alert alert-info">
+	<p><strong>Did you know?</strong> Support for méli-mélo is provided during weekly <a href="https://github.com/wet-boew/wet-boew/wiki/WET-Office-hours,-Heures-de-service-de-la-BOEW">WET Office hours</a> hold remotely every Tuesday afternoon.</p>
+</div>
+
+<h2 id="mli-mlo-comp">Compilations</h2>
+
+<p><strong>Every compilation's life expectancy is estimated to be approximately one (1) year</strong>, after which point it becomes "frozen" (deprecated). This should provide a feature's sponsor enough time to find resources to make their feature progressing towards an official GCWeb feature. Using a <a href="compilation-gelé/index.html" hreflang="fr">frozen méli-mélo compilation</a> into any web page is not strongly discouraged. It must be replaced by the corresponding GCWeb feature, another méli-mélo compilation or simply removed.</p>
+
+<p>Features are grouped into compilations in order to quickly:</p>
+<ul>
+	<li>initiate usability research;</li>
+	<li>initiate preliminary discussion with key organisation; and</li>
+	<li>transforming the feature into a high quality reusable product adapted for GCWeb;</li>
+	<li>regroup and ease a central coordination for new innovations.</li>
+</ul>
+
+<h3 id="mli-mlo-list">Active méli-mélo compilations and their features</h3>
+
+<ul class="row list-unstyled wb-eqht-grd mrgn-tp-md">
+
+{% for item in site.data[ "mli-mlo" ].packages %}
+	<li class="col-xs-12 col-md-4 mrgn-tp-md mrgn-bttm-md">
+		<div class="brdr-tp brdr-rght brdr-bttm brdr-lft hght-inhrt">
+			<h4 class="mrgn-tp-md mrgn-rght-md mrgn-bttm-md mrgn-lft-md">{{ item.nom }}</h4>
+			<div class="mrgn-rght-md mrgn-bttm-md mrgn-lft-md">
+				<ul class="mrgn-bttm-lg mrgn-lft-md">
+				{% for pack in item.libs %}
+					{% assign indexPage = site.data[ "mli-mlo" ].subProjects | where: "nom", pack | first %}
+					<li><a href="/gcweb-compiled-demos/méli-mélo-demos/{{ item.nom }}/{{ pack }}/{{ indexPage.mainpage }}">{{ pack }}</a></li>
+				{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</li>
+{% endfor %}
+</ul>
+
+<p><small>(<a href="compilation-gelé/index.html" hreflang="fr">View frozen and deprecated méli-mélo compilations (in French only)</a>.)</small></p>
+
+<h2>Creating a Méli-mélo feature</h2>
+
+<p>Have a feature ready to be submitted as a méli-mélo? Here are the things you need to know.</p>
+
+<fieldset class="gc-chckbxrdio">
+	<legend id="requirements">Minimum requirements for a new feature are:</legend>
+	<ul class="list-unstyled lst-spcd-2">
+		<li class="checkbox">
+			<input type="checkbox" id="req1">
+			<label for="req1">Must be reusable;</label>
+		</li>
+		<li class="checkbox">
+			<input type="checkbox" id="req2">
+			<label for="req2">Must not contain any interference with WET-BOEW &amp; GCWeb, meaning no component override nor conflict. When possible, component extension should be contributed in the <a href="../components/provisional-en.html">provisional</a> or stable component instead;</label>
+		</li>
+		<li class="checkbox">
+			<input type="checkbox" id="req3">
+			<label for="req3">Must be built with accessibility and security in mind. Accessibility conformance remains the responsibility of the publisher when implementing the feature into a web page;</label>
+		</li>
+		<li class="checkbox">
+			<input type="checkbox" id="req4">
+			<label for="req4">Must not impact any content by default on page load by leveraging closure technique unless the feature is explicitly activated through the HTML, either by using a CSS class or data attribute, for example <a href="https://wet-boew.github.io/wet-boew/demos/helloworld/helloworld-en.html">sample WET-BOEW plugin</a>;</label>
+		</li>
+		<li class="checkbox">
+			<input type="checkbox" id="req5">
+			<label for="req5">Must have its name in the right format (see <a href="#feature-name">feature name example below</a>).</label>
+		</li>
+		<li class="checkbox">
+			<input type="checkbox" id="req6">
+			<label for="req6">Must be <a href="#sponsor" rel="help">sponsored<sup aria-hidden="true"><span class="fas fa-info-circle"></span></sup></a> by a department, with an active representative of that department;</label>
+		</li>
+		<li class="checkbox">
+			<input type="checkbox" id="req7">
+			<label for="req7">Must include an <a href="#implementation-plan" rel="help">implementation plan<sup aria-hidden="true"><span class="fas fa-info-circle"></span></sup></a>;</label>
+		</li>
+		<li class="checkbox">
+			<input type="checkbox" id="req8">
+			<label for="req8">Must have a demo / working example published for each individual sub-features and styles, meaning each JS configurations and CSS classes respectively;</label>
+		</li>
+	</ul>
+</fieldset>
+
+<h3>Get started</h3>
+
+<p>Below are instructions on how to create a new méli-mélo feature in GCWeb.</p>
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+		<h4 class="panel-title">Tip to quickly get started!</h4>
+	</div>
+	<div class="panel-body">
+		<p>Start by coding and/or exposing your feature and its demo(s) by leveraging <a href="https://github.com/wet-boew/gcweb-jekyll">GCWeb Jekyll theme</a> before your contribution to GCWeb.</p>
+	</div>
+</div>
+
+<ol class="lst-spcd-2">
+	<li>Ensure your feature code is all included in one (1) JavaScript file and/or on (1) CSS file.</li>
+	<li>Create a new feature folder inside the <a href="https://github.com/wet-boew/GCWeb/tree/master/m%C3%A9li-m%C3%A9lo"><code>/méli-mélo</code></a> GCWeb root folder.</li>
+	<li id="feature-name">Name your feature and its folder by following this notation: <code>YYYY-MM-[FeatureName]</code>. The year and month must correspond to the feature's initial publication date. For example "2021-05-steps".</li>
+	<li>Create and publish your demo / working example for each individual sub-features and styles, meaning each JS configurations and CSS classes respectively, either using the <a href="https://github.com/wet-boew/gcweb-jekyll">GCWeb Jekyll theme</a> or GCWeb itself.</li>
+	<li>Designate a <a href="#sponsor" rel="help">sponsor<sup aria-hidden="true"><span class="fas fa-info-circle"></span></sup></a> for the feature.</li>
+	<li>Build and publish an <a href="#implementation-plan" rel="help">implementation plan<sup aria-hidden="true"><span class="fas fa-info-circle"></span></sup></a>.</li>
+	<li>Ensure all <a href="#requirements">minimum requirements listed above</a> are met.</li>
+	<li><strong>Optional:</strong> Test your code by following the instructions on <a href="../docs/developing-en.html">developing for GCWeb</a>.</li>
+	<li>Submit your new feature through a GitHub Pull request (PR) in the GCWeb repository; please consult <a href="https://github.com/wet-boew/GCWeb/blob/master/CONTRIBUTING.md">contribution guidelines</a>.</li>
+	<li>If changes are requested on your PR after technical review (as per <a href="#tech-checklist">checklist below</a>), collaborate with the WET-BOEW team to get it approved. For reference, first-time contribution usually requires 3+ rounds of back-and-forth code review taking a week each time.</li>
+	<li>Once your PR is approved, your feature will be assigned to a <a href="#mli-mlo-comp">méli-mélo compilation</a> and released on Canada.ca at the next release window one (1) week after code is merged.</li>
+	<li><strong>Strongly recommended:</strong> After release, update the méli-mélo feature code by executing the implementation plan and addressing all TODO's identified by the WET-BOEW team.</li>
+	<li><strong>Recommended:</strong> Whenever possible, participate at the weekly <a href="https://github.com/wet-boew/wet-boew/wiki/WET-Office-hours,-Heures-de-service-de-la-BOEW">WET Office hours</a> on Tuesday afternoon. The WET-BOEW team will be able to help you progress in your contribution and execute your implementation plan by finding ways to remove any technical or procedural barriers you may encounter.</li>
+</ol>
+
+<p class="mrgn-tp-lg">See <a href="2021-05-steps/index.html">2021-05-steps</a> and its <a href="https://github.com/wet-boew/GCWeb/tree/master/m%C3%A9li-m%C3%A9lo/2021-05-steps">folder on GitHub</a> as a complete example of a méli-mélo feature containing all the required information.</p>
+
+<details id="tech-checklist" class="mrgn-tp-lg mrgn-bttm-lg">
+	<summary>Technical review checklist</summary>
+
+	<p>This list contains the steps that the WET-BOEW team uses to approve new méli-mélo features.</p>
+	<ul>
+		<li>Ensure the <a href="#sponsor">project sponsor</a> is clearly identified;</li>
+		<li>Project folder name follows the proper naming convention: <code>YYYY-MM-[FeatureName]</code>;</li>
+		<li>Ensure each JavaScript feature and each CSS style comes with a demo / working example;</li>
+		<li>Perform a code review to ensure there are no overrides nor conflict with GCWeb and/or WET-BOEW;</li>
+		<li>Perform a quick check for any major or obvious web accessibility and security issue;</li>
+		<li>Ensure the feature doesn't impact any content by default on page load by leveraging closure technique unless the feature is explicitly activated through the HTML, either through the use of a CSS class or data attribute;</li>
+		<li>Review the <a href="#implementation-plan">implementation plan</a> to ensure it contains reasonable due dates and deliverables.</li>
+	</ul>
+</details>
+
+<h4 id="sponsor">Sponsor</h4>
+
+<p>A sponsor is an entity responsible for ensuring a méli-mélo feature progresses towards a stable &amp; widely reusable feature as per the implementation plan. The sponsor will most likely be the author of a feature, representing their department.</p>
+
+<h4 id="implementation-plan">Implementation plan</h4>
+
+<p>The implementation plan, also known as a planning horizon, is meant to set milestones in order to get a méli-mélo feature stabilized into the WET-BOEW / GCWeb code base. It must contain the following milestones:</p>
+
+<ul>
+	<li>Engagement with the Digital Transformation Office (DTO) at Treasury Board Secretariat;</li>
+	<li>Review and perform the identification of the feature transformation requirement to be able to complete the integration progress into GCWeb;</li>
+	<li>Produce accessibility conformance report and attach usability report (if any);</li>
+	<li>Transformation of the méli-mélo functionality into a GCWeb provisional feature;</li>
+	<li>Complete feature stabilisation task, including amongst other things working example translation, writing guidance, publishing <abbr title="Accessibility Conformance Reports">ACR</abbr>s, feature API documentation, etc.</li>
+</ul>
+
+<p>Each item of the plan must have an <strong>estimated due date</strong> as an indicator to measure integration progress into GCWeb. The expectation is to get the méli-mélo feature fully integrated into GCWeb within its lifespan of approximatively one (1) year. See an <a href="https://raw.githubusercontent.com/wet-boew/GCWeb/master/m%C3%A9li-m%C3%A9lo/2021-05-steps/meta.md">example of an implementation plan</a>.</p>
+
+<h4>Versioning</h4>
+
+<p>This framework for méli-mélo compilations and features are excluded from the <a href="https://wet-boew.github.io/wet-boew-documentation/decision/3.html">GCWeb public API</a>. Any change or removal would only trigger a patch release of GCWeb. This means developers are fully responsible (but not required) to document any subsequent change they make to their méli-mélo feature.</p>
+
+<div class="well mrgn-tp-lg">
+	<h2 class="h4 mrgn-tp-sm">See also:</h2>
+	<p><a href="../thématique/gc-thématique-en.html">GC promotional thematics</a> for custom code explicitly dedicated to promotional content that affects a set of pages.</p>
+</div>

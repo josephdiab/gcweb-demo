@@ -1,0 +1,166 @@
+---
+title: Fonctionalités méli-mélo
+description: Fonctionalités réutilisables étant dans un stade préliminaire d'expérimentation.
+lang: fr
+altLangPage: méli-mélo-en.html
+dateModified": 2022-04-21
+css:
+- href: https://use.fontawesome.com/releases/v5.8.1/css/all.css
+  integrity: sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf
+---
+
+<p>Fonctionalités réutilisables étant dans un stade préliminaire d'expérimentation. Les fonctionnalités sont composées de code personnalisé CSS et/ou Javascript. Dès qu'une fonctionnalité est développée et que les exigences minimales sont rencontrées, un méli-mélo peut être déployé et prêt à être utilisé à l'intérieur d'une semaine sur Canada.ca. Voir les <a href="#mli-mlo-liste">mélis-mélos existants</a>.</p>
+
+<div class="alert alert-info">
+	<p><strong>Saviez-vous que&nbsp;?</strong> Du support est offert durant les <a href="https://github.com/wet-boew/wet-boew/wiki/WET-Office-hours,-Heures-de-service-de-la-BOEW">Heures de service de la BOEW</a> qui ont lieu à distance tous les mardis après-midis.</p>
+</div>
+
+<h2 id="mli-mlo-comp">Compilations</h2>
+
+<p><strong>La durée de vie approximative de chaque compilation est d'environ un (1) an</strong>, après quoi il devient "gelé" (obsolette). Cela devrait donner assez de temps au département parrain de trouver les ressources nécessaires afin de faire progresser leur fonctionnalité expérimentale vers une fonctionnalité officelle de GCWeb. Utiliser une <a href="compilation-gelé/index.html" hreflang="fr">compilation méli-mélo gelée</a> sur une page web est fortement déconseillé. Ce doit être remplacé soit par la fonctionnalité GCWeb correspondante, par une autre compilation méli-mélo ou bien simplement être retiré.</p>
+
+<p>Les fonctionalités sont regroupées sous forme de compilations afin de rapidement&nbsp;:</p>
+<ul>
+	<li>amorcer des recherches de convivialité;
+	<li>amorcer les discussions préliminaires avec les organismes organismes clef;</li>
+	<li>transformer les fonctionnalités en produits de qualité adaptées pour GCWeb; et</li>
+	<li>regrouper et facilité une coordination centralisé pour les innovateurs(rices).</li>
+</ul>
+
+<h3 id="mli-mlo-liste">Compilations méli-mélo actives et leurs fonctionnalités</h3>
+
+<ul class="row list-unstyled wb-eqht-grd mrgn-tp-md">
+
+{% for item in site.data[ "mli-mlo" ].packages %}
+	<li class="col-xs-12 col-md-4 mrgn-tp-md mrgn-bttm-md">
+		<div class="brdr-tp brdr-rght brdr-bttm brdr-lft hght-inhrt">
+			<h4 class="mrgn-tp-md mrgn-rght-md mrgn-bttm-md mrgn-lft-md">{{ item.nom }}</h4>
+			<div class="mrgn-rght-md mrgn-bttm-md mrgn-lft-md">
+				<ul class="mrgn-bttm-lg mrgn-lft-md">
+				{% for pack in item.libs %}
+					{% assign indexPage = site.data[ "mli-mlo" ].subProjects | where: "nom", pack | first %}
+					<li><a href="/gcweb-compiled-demos/méli-mélo-demos/{{ item.nom }}/{{ pack }}/{{ indexPage.mainpage }}">{{ pack }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</li>
+{% endfor %}
+</ul>
+
+<p><small>(<a href="compilation-gelé/index.html">Consulter les compilations méli-mélo gelées et obselettes</a>.)</small></p>
+
+<h2>Créer une fonctionnalité méli-mélo</h2>
+
+<p>Vous avez une fonctionnalité prête à être soumisie en tant que méli-mélo? Voici ce que vous devez savoir.</p>
+
+<fieldset class="gc-chckbxrdio">
+	<legend id="exigences">Les exigences minimales pour une nouvelle fonctionnalité sont&nbsp;:</legend>
+	<ul class="list-unstyled lst-spcd-2">
+		<li class="checkbox">
+			<input type="checkbox" id="req1">
+			<label for="req1">Doit être réutilisable;</label>
+		</li>
+		<li class="checkbox">
+			<input type="checkbox" id="req2">
+			<label for="req2">Ne doit pas présenter d'interférence avec WET-BOEW &amp; GCWeb, c'est-à-dire aucun chevauchement ou collision. Lorsque possible, l'extension d'une composante devrait être contribuée directement à travers la composante <a href="../components/provisional-fr.html">provisionnelle</a> ou stable;</label>
+		</li>
+		<li class="checkbox">
+			<input type="checkbox" id="req3">
+			<label for="req3">Doit être développé avec l'accessibilité et la sécurité en tête. La conformance à l'accessibilité demeure la responsabilité d'un éditeur lorsqu'il ou elle implémente la fonctionnalité sur une page web;</label>
+		</li>
+		<li class="checkbox">
+			<input type="checkbox" id="req4">
+			<label for="req4">Ne doit pas affecter de contenu par défaut lors du chargement de la page en utilisant la technique de "closure" sauf si elle est explicitement activée à travers le HTML, soit à travers l'utilisation d'une classe CSS ou d'un attribut "data", tout comme le <a href="https://wet-boew.github.io/wet-boew/demos/helloworld/helloworld-en.html">plugiciel WET-BOEW d'exemple</a>;</label>
+		</li>
+		<li class="checkbox">
+			<input type="checkbox" id="req5">
+			<label for="req5">Doit avoir un nom dans le bon format (voir <a href="#feature-name">exemple de nom de fonctionnalité ci-dessous</a>).</label>
+		</li>
+		<li class="checkbox">
+			<input type="checkbox" id="req6">
+			<label for="req6">Doit être <a href="#parrainage" rel="help">parrainé<sup aria-hidden="true"><span class="fas fa-info-circle"></span></sup></a> par un département, avec un représentant actif de celui-ci;</label>
+		</li>
+		<li class="checkbox">
+			<input type="checkbox" id="req7">
+			<label for="req7">Doit inclure un <a href="#implementation-plan" rel="help">plan d'implémentation<sup aria-hidden="true"><span class="fas fa-info-circle"></span></sup></a>;</label>
+		</li>
+		<li class="checkbox">
+			<input type="checkbox" id="req8">
+			<label for="req8">Doit avoir un démo / exemple pratique publié pour chaque sous-fonctionnalité et style individuellement, soit chaque configuration JS et chaque classe CSS respectivement;</label>
+		</li>
+	</ul>
+</fieldset>
+
+<h3>Débuter</h3>
+
+<p>Vous trouverez ci-dessous les instructions sur comment créer une nouvelle fonctionnalité méli-mélo dans GCWeb.</p>
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+		<h4 class="panel-title">Astuce pour débuter rapidement&nbsp;!</h4>
+	</div>
+	<div class="panel-body">
+		<p>Commencez par coder et/ou exposer votre fonctionnalité et son ou ses démo(s) grâce au <a href="https://github.com/wet-boew/gcweb-jekyll">thème GCWeb Jekyll</a> avant votre contribution à GCWeb.</p>
+	</div>
+</div>
+
+<ol class="lst-spcd-2">
+	<li>Assurez-vous que le code de votre fonctionnalité est compris dans un seul fichier JavaScript et/our un fichier CSS.</li>
+	<li>Créez un nouveau dossier de fonctionnalité à l'intérieur du dossier <a href="https://github.com/wet-boew/GCWeb/tree/master/m%C3%A9li-m%C3%A9lo"><code>/méli-mélo</code></a> à la racine de GCWeb.</li>
+	<li id="feature-name">Nommez votre fonctionnalité et son dossier en suivant la nomenclature suivante&nbsp;: <code>AAAA-MM-[NomFonctionnalité]</code>. L'année et le mois doivent correspondent à la date de publication initiale de la fonctionnalité. Par exemple "2021-05-steps".</li>
+	<li>Créez et publiez vos démos / exemples pratiques pour chaque sous-fonctionnalité et style individuellement, soit chaque configuration JS et chaque classe CSS respectivement, soit en utilisant le thème GCWeb Jekyll ou bien GCWeb directement.</li>
+	<li>Désignez un <a href="#parrainage" rel="help">parrain<sup aria-hidden="true"><span class="fas fa-info-circle"></span></sup></a> pour la fonctionnalité.</li>
+	<li>Écrivez et publiez le <a href="#implementation-plan" rel="help">plan d'implémentation<sup aria-hidden="true"><span class="fas fa-info-circle"></span></sup></a>.</li>
+	<li>Assurez-vous que toutes les <a href="#exigences">exigences minimales affiché plus haut</a> sont rencontrées.</li>
+	<li><strong>Optionnel&nbsp;:</strong> Testez votre code en suivant les instructions sur comment <a href="../docs/developing-fr.html">développer pour GCWeb</a>.</li>
+	<li>Soumettez votre nouvelle fonctionnalité à travers une demandes de tirage (Pull Requests) (PR) dans le répertoire GCWeb; veuillez svp consulter les <a href="https://github.com/wet-boew/GCWeb/blob/master/CONTRIBUTING.md">lignes directrices de contribution</a>.</li>
+	<li>Si des changements sont jugées nécessaires après la revue technique de la PR (selon la <a href="#tech-checklist">liste de vérification ci-dessous</a>), collaborez avec l'équipe de la WET-BOEW pour la faire approuver. À titre de référence, une première contribution méli-mélo prend habituellement 3+ rondes de revue de code prenant chacune une semaine.</li>
+	<li>Une fois votre PR approuvée, votre fonctionnalité sera assignée à une <a href="#mli-mlo-comp">compilation méli-mélo</a> et déployée sur Canada.ca lors de la prochaine fenêtre de déploiement une (1) semaine après que le code soit fusionné.</li>
+	<li><strong>Fortement recommandé&nbsp;:</strong> Après le déploiement, mettez à jour le code de la fonctionnalité méli-mélo en exécutant le plan d'implémentation et en adressant tous les items à faire identifiés par l'équipe de la WET-BOEW.</li>
+	<li><strong>Recommandé&nbsp;:</strong> Aussi souvent que possible, participez aux <a href="https://github.com/wet-boew/wet-boew/wiki/WET-Office-hours,-Heures-de-service-de-la-BOEW">Heures de service de la BOEW</a> les mardis après-midis. L'équipe de la WET-BOEW sera en mesure de vous aider à progresser et exécuter votre plan d'implémentation en trouvant des façons d'enlever les barrières techniques ou procédurales que vous rencontrez.</li>
+</ol>
+
+<p class="mrgn-tp-lg">Voyez un exemple complet d'une fonctionnalité méli-mélo contenant toute l'information demandée en consultant <a href="2021-05-steps/index.html">2021-05-steps</a> et son <a href="https://github.com/wet-boew/GCWeb/tree/master/m%C3%A9li-m%C3%A9lo/2021-05-steps">dossier sur GitHub</a> .</p>
+
+<details id="tech-checklist" class="mrgn-tp-lg mrgn-bttm-lg">
+	<summary>Liste de vérification pour revue technique</summary>
+
+	<p>Cette liste contient les étapes que l'équipe de la WET-BOEW suivent pour approuver les nouvelles fonctionnalités mélis-mélos.</p>
+	<ul>
+		<li>S'assure que le <a href="#parrainage">parrain</a> est clairement identifié;</li>
+		<li>Vérifie que le nom du dossier du projet suit la bonne nomenclature&nbsp;: <code>AAAA-MM-[NomFonctionnalité]</code>;</li>
+		<li>S'assure que chaque sous-fonctionnalité JavaScript et style CSS présente un démo / exemple pratique;</li>
+		<li>Performe une revue du code afin d'assurer qu'il n'y a pas de chevauchement ou de collision avec GCWeb and/or WET-BOEW;</li>
+		<li>Effectue une vérification rapide pour trouver des problèmes majeurs ou évident d'accessibilité ou de sécurité;</li>
+		<li>S'assure que la fonctionnalité n'affecte pas de contenu par défaut lors du chargement de la page en utilisant la technique de "closure" sauf si elle est explicitement activée à travers le HTML, soit à travers l'utilisation d'une classe CSS ou d'un attribut "data";</li>
+		<li>Révise le <a href="#implementation-plan">plan d'implémentation</a> afin d'assurer qu'il contient des livrables et dates butoirs raisonables.</li>
+	</ul>
+</details>
+
+<h4 id="parrainage">Parrainage</h4>
+
+<p>Le parrain est une entité responsable d'assurer qu'une fonctionnalité méli-mélo progresse vers une fonctionnalité stable &amp; largement réutilisable tel que prescrit par le plan d'implémentation. Les chances sont grandes que le parrain d'une fonctionnalité soit l'auteur de celle-ci, puis que cette entité représente son département.</p>
+
+<h4 id="implementation-plan">Plan d'implémentation</h4>
+
+<p>Le plan d'implémentation permet de mettre en place des étapes importantes afin d'arriver à stabiliser une fonctionnalité méli-mélo dans le code de WET-BOEW / GCWeb. Le plan doit contenir les étapes suivantes&nbsp;:</p>
+
+<ul>
+	<li>Collaboration avec le Bureau de la transformation numérique (BTN) au Secrétariat du Conseil du Trésor du Canada;</li>
+	<li>Réviser et performer l'identification du changement nécessaire afin de compléter l'intégration à GCWeb;</li>
+	<li>Produire un rapport de conformance à l'accessibilité et attacher un rapport de convivialité (le cas échéant);</li>
+	<li>Transformation de la fonctionnalité méli-mélo en tant que fonctionnalité provisionel dans GCWeb;</li>
+	<li>Compléter la tâche de stabilisation, qui inclue entre autres la traduction des l'exemple pratique, écrire les directives, publier le rapport de conformance à l'accessibilité, la documentation de l'API, etc.</li>
+</ul>
+
+<p>Chaque élément du plan doit avoir une <strong>date butoir estimée</strong> en tant qu'indicateur pour mesurer le progrès de l'intégration à GCWeb. Ce qui est attendu est d'avoir la fonctionnalité méli-mélo intégrée à GCWeb à l'intérieur de sa durée de vie d'environ un (1) an. Voyez un <a href="https://raw.githubusercontent.com/wet-boew/GCWeb/master/m%C3%A9li-m%C3%A9lo/2021-05-steps/meta.md">exemple de plan d'implémentation</a>.</p>
+
+<h4>Version</h4>
+
+<p>Ce système de compilations et fonctionnalités méli-mélo est exlcus de <a href="https://wet-boew.github.io/wet-boew-documentation/decision/3.html" hreflang="en">l'API publique de GCWeb (en anglais seulement)</a>. Tout changement ou retrait déclancherait seulement un déploiement de type "correctif" sur GCWeb. Cela signifie que le développeur est complètement responsable, mais n'est pas dans l'obligation, de documenter tout changement subséquent qu'il/elle apporterait à sa fonctionnalité méli-mélo.</p>
+
+<div class="well mrgn-tp-lg">
+	<h2 class="h4 mrgn-tp-sm">Voir aussi&nbsp;:</h2>
+	<p><a href="../thématique/gc-thématique-fr.html">thématiques promotionnelles du GC</a> pour du code personnalisé qui est explicitement dédié au contenu promotionnel et qui affecte un nombre respectable de pages.</p>
+</div>

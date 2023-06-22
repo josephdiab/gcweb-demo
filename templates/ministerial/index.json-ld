@@ -1,0 +1,68 @@
+{
+	"@context": {
+		"@version": 1.1,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
+		"en": "Ministerial profile",
+		"fr": "Profile ministriel"
+	},
+	"description": {
+		"en": "Ministerial profile templates documentation and example",
+		"fr": "Documentation et exemple de page Profile ministriel."
+	},
+	"modified": "2021-12-02",
+	"componentName": "ministerial",
+	"status": "stable",
+	"pages": {
+		"docs": [
+
+			{
+				"title": "Ministerial profile page",
+				"language": "en",
+				"path": "ministerial-doc-en.html"
+			},
+			{
+				"title": "Page de Profile ministriel",
+				"language": "fr",
+				"path": "ministerial-doc-fr.html"
+			}
+		],
+		"examples": [
+
+			{
+				"title": "Ministerial profile",
+				"language": "en",
+				"path": "ministerial-en.html"
+			},
+			{
+				"title": "Profile ministriel",
+				"language": "fr",
+				"path": "ministerial-fr.html"
+			},
+			{
+				"title": "Ministerial profile - swearing-in day",
+				"language": "en",
+				"path": "ministerial-reduced-en.html"
+			},
+			{
+				"title": "Profile ministriel - jour d'assermentation",
+				"language": "fr",
+				"path": "ministerial-reduced-fr.html"
+			},
+			{
+				"title": "Parliamentary secretaries profile - swearing-in day",
+				"language": "en",
+				"path": "parliamentary-secretaries-reduced-en.html"
+			},
+			{
+				"title": "Profile des secrétaires parlementaires - jour d'assermentation",
+				"language": "fr",
+				"path": "parliamentary-secretaries-reduced-fr.html"
+			}
+		]
+	}
+}

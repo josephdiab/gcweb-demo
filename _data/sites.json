@@ -1,0 +1,603 @@
+[{
+	"@context": {
+		"@version": 1.1,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
+		"en": "Archived - template",
+		"fr": "Archivé - Gabarit"
+	},
+	"description": {
+		"en": "Gobal demoed feature included but need to move in its own folder.",
+		"fr": "Fonctionalité globale inclus mais qu'il nécessite qu'ils soit déplacé dans son propre dossier."
+	},
+	"modified": "2022-05-03",
+	"componentName": "archived",
+	"status": "stable",
+	"pages": {
+		"examples": [
+			{
+				"title": "Archived - Content page",
+				"language": "en",
+				"path": "archived-en.html"
+			},
+			{
+				"title": "Archivé - Page de contenu",
+				"language": "fr",
+				"path": "archived-fr.html"
+			}
+		]
+	}
+}
+,{
+	"@context": {
+		"@version": 1.1,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
+		"en": "Authentication",
+		"fr": "Authentification"
+	},
+	"description": {
+		"en": "Documentation and working example on how to use the contextual sign in button.",
+		"fr": "Documentation et example pratique sur l'utilisation du bouton de connexion contextuel."
+	},
+	"modified": "2022-05-03",
+	"componentName": "authentication",
+	"status": "stable",
+	"pages": {
+		"docs": [
+			{
+				"title": "Authentication patterns",
+				"language": "en",
+				"path": "authentication-en.html"
+			},
+			{
+				"title": "Modèles d'authentification",
+				"language": "fr",
+				"path": "authentication-fr.html"
+			}
+		],
+		"examples": [
+			{
+				"title": "Contextual Sign in button",
+				"language": "en",
+				"path": "contextual-signin-en.html"
+			},
+			{
+				"title": "Bouton contextuel « Se connecter »",
+				"language": "fr",
+				"path": "contextual-signin-fr.html"
+			},
+			{
+				"title": "Contextual Sign in button with extended custom label",
+				"language": "en",
+				"path": "contextual-signin-label-extended-en.html"
+			},
+			{
+				"title": "Bouton contextuel « Se connecter » avec libellé personnalisé étendu",
+				"language": "fr",
+				"path": "contextual-signin-label-extended-fr.html"
+			},
+			{
+				"title": "Contextual Sign in button without custom labels",
+				"language": "en",
+				"path": "contextual-signin-nolabels-en.html"
+			},
+			{
+				"title": "Bouton contextuel « Se connecter » sans aucun libelés personnalisés",
+				"language": "fr",
+				"path": "contextual-signin-nolabels-fr.html"
+			},
+			{
+				"title": "Contextual Sign in button without the GCWeb Menu",
+				"language": "en",
+				"path": "contextual-signin-nomenu-en.html"
+			},
+			{
+				"title": "Bouton contextuel « Se connecter » sans le menu GCWeb",
+				"language": "fr",
+				"path": "contextual-signin-nomenu-fr.html"
+			},
+			{
+				"title": "Content page - Signed-Off pattern",
+				"language": "en",
+				"path": "signedoff-en.html"
+			},
+			{
+				"title": "Page de contenu - Modèle de session fermée",
+				"language": "fr",
+				"path": "signedoff-fr.html"
+			},
+			{
+				"title": "Content page - Signed-On pattern",
+				"language": "en",
+				"path": "signedon-en.html"
+			},
+			{
+				"title": "Page de contenu - Modèle de session ouverte",
+				"language": "fr",
+				"path": "signedon-fr.html"
+			}
+		]
+	}
+}
+,{
+	"@context": {
+		"@version": 1.1,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
+		"en": "Breadcrumb trail",
+		"fr": "Fil d'Ariane"
+	},
+	"description": {
+		"en": "Documentation on how to use breadcrumbs.",
+		"fr": "Documentation sur l'utilisation du fil d'arianne."
+	},
+	"modified": "2021-02-12",
+	"componentName": "breadcrumbs",
+	"status": "stable",
+	"pages": {
+		"docs": [
+			{
+				"title": "Breadcrumb trail",
+				"language": "en",
+				"path": "breadcrumbs-en.html"
+			},
+			{
+				"title": "Fil d'Ariane",
+				"language": "fr",
+				"path": "breadcrumbs-fr.html"
+			}
+		]
+	}
+}
+,{
+	"@context": {
+		"@version": 2.0,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
+		"en": "Report a problem (RAP) - Feedback",
+		"fr": "Signaler un problème (SUP) - Commentaires"
+	},
+	"description": {
+		"en": "Documentation on how to use the page feedback form.",
+		"fr": "Documentation sur l'utilisation de formulaire de commentaires de page."
+	},
+	"modified": "2022-04-26",
+	"componentName": "feedback",
+	"status": "stable",
+	"pages": {
+		"docs": [
+			{
+				"title": "Documentation for Page feedback form",
+				"language": "en",
+				"path": "feedback-docs-en.html"
+			},
+			{
+				"title": "Documentation pour formulaire de commentaire de page",
+				"language": "fr",
+				"path": "feedback-docs-fr.html"
+			}
+		],
+		"examples": [
+			{
+				"title": "Page feedback form",
+				"language": "en",
+				"path": "feedback-en.html"
+			},
+			{
+				"title": "Formulaire de commentaire de page",
+				"language": "fr",
+				"path": "feedback-fr.html"
+			}
+		]
+	}
+}
+,{
+	"@context": {
+		"@version": 1.1,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
+		"en": "Footer",
+		"fr": "Pied de page"
+	},
+	"description": {
+		"en": "Documentation and working example on how to use the footer.",
+		"fr": "Documentation et example pratique sur l'utilisation du pied de page."
+	},
+	"modified": "2022-01-12",
+	"componentName": "footers",
+	"status": "stable",
+	"pages": {
+		"docs": [
+			{
+				"title": "Footer",
+				"language": "en",
+				"path": "footers-en.html"
+			},
+			{
+				"title": "Pied de page complet",
+				"language": "fr",
+				"path": "footers-fr.html"
+			}
+		],
+		"examples": [
+			{
+				"title": "Footer",
+				"language": "en",
+				"path": "footers-en.html"
+			},
+			{
+				"title": "Pied de page complet",
+				"language": "fr",
+				"path": "footers-fr.html"
+			},
+			{
+				"title": "Main footer band and sub-footer band",
+				"language": "en",
+				"path": "no-footer-contextual-en.html"
+			},
+			{
+				"title": "Bande principale et bande sous pied de page",
+				"language": "fr",
+				"path": "no-footer-contextual-fr.html"
+			},
+			{
+				"title": "Contextual band and sub-footer band",
+				"language": "en",
+				"path": "no-footer-main-en.html"
+			},
+			{
+				"title": "Bande contextuelle et bande sous pied de page",
+				"language": "fr",
+				"path": "no-footer-main-fr.html"
+			},
+			{
+				"title": "Hide optional links from the sub-footer band",
+				"language": "en",
+				"path": "no-footer-corporate-en.html"
+			},
+			{
+				"title": "Masquer les liens optionnels de la bande sous le pied de page",
+				"language": "fr",
+				"path": "no-footer-corporate-fr.html"
+			},
+			{
+				"title": "Contextual band and sub-footer band with no optional links",
+				"language": "en",
+				"path": "only-footer-contextual-en.html"
+			},
+			{
+				"title": "Bande contextuelle et bande sous pied de page sans les liens facultatifs",
+				"language": "fr",
+				"path": "only-footer-contextual-fr.html"
+			},
+			{
+				"title": "Bande principale et bande sous pied de page sans les liens facultatifs",
+				"language": "en",
+				"path": "only-footer-main-en.html"
+			},
+			{
+				"title": "Masquer la bande contextuelle et les liens optionnels de la bande sous le pied de page du pied de page",
+				"language": "fr",
+				"path": "only-footer-main-fr.html"
+			},
+			{
+				"title": "Sub-footer band only",
+				"language": "en",
+				"path": "only-footer-corporate-en.html"
+			},
+			{
+				"title": "Bande sous pied de page uniquement",
+				"language": "fr",
+				"path": "only-footer-corporate-fr.html"
+			},
+			{
+				"title": "Sub-footer band only, with no optional links",
+				"language": "en",
+				"path": "no-footers-en.html"
+			},
+			{
+				"title": "Bande sous pied de page uniquement sans les liens facultatifs",
+				"language": "fr",
+				"path": "no-footers-fr.html"
+			},
+			{
+				"title": "Customize 'Terms and conditions' and 'Privacy' links in footer",
+				"language": "en",
+				"path": "custom-transparency-links-en.html"
+			},
+			{
+				"title": "Personnaliser les liens 'Avis' et 'Confidentialité' dans le pied de page",
+				"language": "fr",
+				"path": "custom-transparency-links-fr.html"
+			},
+			{
+				"title": "Contextual band and link variations",
+				"language": "en",
+				"path": "contextual-example-en.html"
+			},
+			{
+				"title": "Bande contextuelle et des variations de lien",
+				"language": "fr",
+				"path": "contextual-example-fr.html"
+			}
+		]
+	}
+}
+,{
+	"@context": {
+		"@version": 2.0,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
+		"en": "GCWeb Menu",
+		"fr": "Menu GCWeb"
+	},
+	"description": {
+		"en": "Documentation on how to use the GCWeb menu.",
+		"fr": "Documentation sur l'utilisation du menu GCWeb."
+	},
+	"modified": "2022-05-25",
+	"componentName": "gcweb-menu",
+	"status": "stable",
+	"pages": {
+		"docs": [
+			{
+				"title": "GCWeb Menu",
+				"language": "en",
+				"path": "gcweb-menu-docs-en.html"
+			},
+			{
+				"title": "Menu GCWeb",
+				"language": "fr",
+				"path": "gcweb-menu-docs-fr.html"
+			}
+		]
+	}
+}
+,{
+	"@context": {
+		"@version": 2.0,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
+		"en": "Header",
+		"fr": "Entête"
+	},
+	"description": {
+		"en": "Documentation on how to use the header.",
+		"fr": "Documentation sur l'utilisation de l'entête."
+	},
+	"modified": "2022-05-10",
+	"componentName": "header",
+	"status": "stable",
+	"pages": {
+		"docs": [
+			{
+				"title": "Header",
+				"language": "en",
+				"path": "header-docs-en.html"
+			},
+			{
+				"title": "Entête",
+				"language": "fr",
+				"path": "header-docs-fr.html"
+			}
+		]
+	}
+}
+,{
+	"@context": {
+		"@version": 1.1,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
+		"en": "Helpers",
+		"fr": "Outils d'aides"
+	},
+	"description": {
+		"en": "Helpers to overwrite compiled styles",
+		"fr": "Outils d'aides pour effectuer de la surchage sur les styles compiler"
+	},
+	"modified": "2019-05-01",
+	"componentName": "helpers",
+	"status": "stable",
+	"pages": {
+		"docs": [
+			{
+				"title": "Colour",
+				"language": "en",
+				"path": "colour-en.html"
+			},
+			{
+				"title": "Couleur",
+				"language": "fr",
+				"path": "colour-fr.html"
+			}
+		]
+	}
+}
+,{
+	"@context": {
+		"@version": 1.1,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
+		"en": "Language toggle link",
+		"fr": "Lien pour changer de langue"
+	},
+	"description": {
+		"en": "Documentation on how to use language toogle link.",
+		"fr": "Documentation sur l'utilisation lien pour changer de langue."
+	},
+	"modified": "2022-11-01",
+	"componentName": "language",
+	"status": "stable",
+	"pages": {
+		"docs": [
+			{
+				"title": "Language toggle link",
+				"language": "en",
+				"path": "language-en.html"
+			},
+			{
+				"title": "Lien pour changer de langue",
+				"language": "fr",
+				"path": "language-fr.html"
+			}
+		]
+	}
+}
+,{
+	"@context": {
+		"@version": 2.0,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
+		"en": "Page details",
+		"fr": "Détails de la page"
+	},
+	"description": {
+		"en": "Documentation on how to use the page details section.",
+		"fr": "Documentation sur l'utilisation de la section des détails de la page."
+	},
+	"modified": "2022-04-11",
+	"componentName": "page-details",
+	"status": "stable",
+	"pages": {
+		"docs": [
+			{
+				"title": "Documentation for Page details",
+				"language": "en",
+				"path": "page-details-docs-en.html"
+			},
+			{
+				"title": "Documentation pour Détails de la page",
+				"language": "fr",
+				"path": "page-details-docs-fr.html"
+			}
+		],
+		"examples": [
+			{
+				"title": "Default page details",
+				"language": "en",
+				"path": "default-page-details-en.html"
+			},
+			{
+				"title": "Détails de la page par default",
+				"language": "fr",
+				"path": "default-page-details-fr.html"
+			},
+			{
+				"title": "Page details without 'Report a problem' and 'Share this page' buttons",
+				"language": "en",
+				"path": "page-details-without-buttons-en.html"
+			},
+			{
+				"title": "Détails de la page sans les boutons 'Signaler un problème' et 'Partager cette page'",
+				"language": "fr",
+				"path": "page-details-without-buttons-fr.html"
+			},
+			{
+				"title": "Page details without 'Report a problem' button",
+				"language": "en",
+				"path": "page-details-without-report-btn-en.html"
+			},
+			{
+				"title": "Détails de la page sans le bouton 'Signaler un problème'",
+				"language": "fr",
+				"path": "page-details-without-report-btn-fr.html"
+			},
+			{
+				"title": "Page details without 'Share this page' button",
+				"language": "en",
+				"path": "page-details-without-share-btn-en.html"
+			},
+			{
+				"title": "Détails de la page sans le bouton 'Partager cette page'",
+				"language": "fr",
+				"path": "page-details-without-share-btn-fr.html"
+			},
+			{
+				"title": "Page details v.1.0 (deprecated)",
+				"language": "en",
+				"path": "deprecated/page-details-v1-en.html"
+			},
+			{
+				"title": "Détails de la page version 1.0 (obsolète)",
+				"language": "fr",
+				"path": "deprecated/page-details-v1-fr.html"
+			}
+		]
+	}
+}
+,{
+	"@context": {
+		"@version": 1.1,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
+		"en": "Skip links",
+		"fr": "Liens de saut de page"
+	},
+	"description": {
+		"en": "Documentation and working example on how to use the skiplinks.",
+		"fr": "Documentation et example pratique sur l'utilisation des liens de saut de page."
+	},
+	"modified": "2022-01-12",
+	"componentName": "skiplinks",
+	"status": "stable",
+	"pages": {
+		"docs": [
+			{
+				"title": "Skip links",
+				"language": "en",
+				"path": "skiplinks-en.html"
+			},
+			{
+				"title": "Liens de saut de page",
+				"language": "fr",
+				"path": "skiplinks-fr.html"
+			}
+		]
+	}
+}
+]
