@@ -9,14 +9,20 @@
 ---
 <div class="wb-prettify all-pre hide"></div>
 
+<style>
+	.btn-square {
+		border-radius: 0;
+	}
+</style>
+
 <section class="col-xs-12 col-sm-5 col-md-4">
 	<form action="#" method="post" name="cse-search-box" role="search" class="form-inline">
 		<div class="form-group wb-srch-qry">
 			<label for="wb-srch-q" class="wb-inv">Search Canada.ca</label>
 			<div class="input-group">
-				<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search Canada.ca" />
-				<div class="input-group-append">
-					<button type="submit" class="btn btn-primary">
+				<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="34" maxlength="170" placeholder="Search Canada.ca" style="display: inline-block; width: calc(100% - 42px);" />
+				<div class="input-group-append" style="white-space: nowrap;">
+					<button type="submit" class="btn btn-primary btn-square" style="margin-left: -1px;">
 						<span class="glyphicon-search glyphicon"></span>
 						<span class="wb-inv">Search</span>
 					</button>
@@ -26,6 +32,7 @@
 		</div>
 	</form>
 </section>
+
 
 <h2>Code</h2>
 <pre><code>
