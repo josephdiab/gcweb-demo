@@ -12,9 +12,9 @@ layout: core
 {%- include variable-core.liquid -%}
 {%- capture page-title -%}
 	{%- if page.titleH1 -%}
-		Main Container
+        {{ page.titleH1 }}
 	{%- elsif page.title -%}
-        Main Container
+		{{ page.title }}
 	{%- else -%}
 		Page untitled
 	{%- endif -%}
@@ -43,5 +43,5 @@ layout: core
     
     &lt;/main&gt;
     </code></pre>
-
+    
 </main>
