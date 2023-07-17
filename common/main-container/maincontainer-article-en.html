@@ -1,0 +1,53 @@
+---
+layout: core
+{
+	"altLangPage": "maincontainer-article-fr.html",
+	"dateModified": "2023-07-04",
+	"description": "Documentation on how to use main container with article.",
+	"language": "en",
+	"title": "Main Container with article example"
+}
+---
+
+{%- include variable-core.liquid -%}
+{%- capture page-title -%}
+	{%- if page.titleH1 -%}
+		Main Container
+	{%- elsif page.title -%}
+		{{ page.title }}
+	{%- else -%}
+		Page untitled
+	{%- endif -%}
+{%- endcapture -%}
+
+<div class="wb-prettify all-pre hide"></div>
+
+<main class="container" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
+    <article>
+        <!-- heading level 1 -->
+    
+        <!-- content page -->
+    
+        <!-- Page details section [Must be configured as a <footer> element in this situation] -->
+      
+        <h3>Article</h3>
+        <p>This represents an article enclosed within the main container.</p>
+    
+    </article>
+
+    <h3>Code</h3>
+    <pre><code>
+    &lt;h2&gt;Main Container with "article"&lt;/h2&gt;
+    &lt;main property="mainContentPage"&gt;
+        &lt;article&gt;
+        &lt;!-- heading level 1 --&gt;
+    
+        &lt;!-- content page --&gt;
+    
+        &lt;!-- Page details section [Must be configured as a &lt;footer&gt; element in this situation] --&gt;
+    
+        &lt;/article&gt;
+    &lt;/main&gt;
+    </code></pre>
+    
+</main>
