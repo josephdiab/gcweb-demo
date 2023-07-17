@@ -15,8 +15,7 @@
 		"fr": "Documentation sur l'utilisation de la barre de recherche."
 	},
 	"modified": "2023-07-05",
-	"componentName": "search-bar",
-	"processing": "baseline",
+	"componentName": "search",
 	"status": "stable",
 	"pages": {
 		"examples": [
