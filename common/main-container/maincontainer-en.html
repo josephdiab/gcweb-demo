@@ -12,7 +12,7 @@ layout: core
 {%- include variable-core.liquid -%}
 {%- capture page-title -%}
 	{%- if page.titleH1 -%}
-		{{ page.titleH1 }}
+		<h1>Main Container</h1>
 	{%- elsif page.title -%}
 		{{ page.title }}
 	{%- else -%}
@@ -35,15 +35,15 @@ layout: core
 
     <h3>Code</h3>
     <pre><code>
-        &lt;h2&gt;Main Container&lt;/h2&gt;
-        &lt;main property="mainContentPage"&gt;
+    &lt;h2&gt;Main Container&lt;/h2&gt;
+    &lt;main property="mainContentPage"&gt;
 
-            &lt;!-- heading level 1 --&gt;
-        
-            &lt;!-- content page --&gt;
-        
-            &lt;!-- Page details section [Must be configured as a &lt;section&gt; element in this situation] --&gt;
-        
-        &lt;/main&gt;
+        &lt;!-- heading level 1 --&gt;
+    
+        &lt;!-- content page --&gt;
+    
+        &lt;!-- Page details section [Must be configured as a &lt;section&gt; element in this situation] --&gt;
+    
+    &lt;/main&gt;
     </code></pre>
 </main>
