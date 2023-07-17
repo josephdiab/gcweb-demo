@@ -29,6 +29,26 @@
 				"title": "Conteneur Principal",
 				"language": "fr",
 				"path": "maincontainer-fr.html"
+			},
+			{
+				"title": "Main Container with article",
+				"language": "en",
+				"path": "maincontainer-article-en.html"
+			},
+			{
+				"title": "Conteneur Principal avec article",
+				"language": "fr",
+				"path": "maincontainer-article-fr.html"
+			},
+			{
+				"title": "Main Container with section",
+				"language": "en",
+				"path": "maincontainer-section-en.html"
+			},
+			{
+				"title": "Conteneur Principal avec section",
+				"language": "fr",
+				"path": "maincontainer-section-fr.html"
 			}
 		]
 	}
