@@ -10,7 +10,15 @@ layout: core
 ---
 
 {%- include variable-core.liquid -%}
-
+{%- capture page-title -%}
+	{%- if page.titleH1 -%}
+		{{ page.titleH1 }}
+	{%- elsif page.title -%}
+		{{ page.title }}
+	{%- else -%}
+		Page untitled
+	{%- endif -%}
+{%- endcapture -%}
 
 <div class="wb-prettify all-pre hide"></div>
 
@@ -22,8 +30,6 @@ layout: core
   
     <!-- Page details section [Must be configured as a <section> element in this situation -->
     <p>This designated area serves as the primary HTML container, providing you with the opportunity to seamlessly incorporate all the relevant content for this page.</p>
-
-    <br>
 
     <h3>Code</h3>
     <pre><code>
