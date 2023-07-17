@@ -12,7 +12,7 @@ layout: core
 {%- include variable-core.liquid -%}
 {%- capture page-title -%}
 	{%- if page.titleH1 -%}
-		Main Container
+        {{ page.titleH1 }}
 	{%- elsif page.title -%}
 		{{ page.title }}
 	{%- else -%}
